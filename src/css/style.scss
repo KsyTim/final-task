@@ -1,0 +1,16 @@
+@import '../css/normalize';
+@import '../css/fonts';
+@import '../css/colors';
+@import '../components/Header/Header.scss';
+@import '../components/Login/Login.scss';
+
+body {
+  font-family: 'Roboto';
+  color: $text-color;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
