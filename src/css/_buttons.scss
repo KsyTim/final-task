@@ -1,0 +1,101 @@
+.btn {
+
+  &-success {
+    background: $success;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: $disabled-text;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 2.5px 20px;
+    
+    &:hover {
+      background: $success-hovered;
+      border: 1px solid $success-hovered;
+    }
+    
+    &:active,
+    &:focus {
+      background: $success-active;
+      border: 1px solid $success-active;
+    }
+  }
+
+  &-default {
+    background: $disabled-text;  
+    outline: none;
+    border: 1px solid $text-color;
+    border-radius: 5px;
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 2.5px 20px;
+  
+    &:hover {
+      background: $default-hovered;
+      border: 1px solid $text-color;
+    }
+  
+    &:active,
+    &:focus {
+      background: $default-active;
+      border: 1px solid $text-color;
+    }
+  }
+
+  &-primary {
+    background: $primary;
+    border: 1px solid $primary;
+    outline: none;
+    border-radius: 5px;
+    color: $disabled-text;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 2.5px 20px;
+  
+    &:hover {
+      background: $primary-hovered;
+      border: 1px solid $primary-hovered;
+    }
+  
+    &:active,
+    &:focus {
+      background: $primary-active;
+      border: 1px solid $primary-active;
+    }
+  }
+
+  &-error {
+    background: $error;    
+    border: 1px solid $error;
+    outline: none;
+    border-radius: 5px;
+    color: $disabled-text;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 2.5px 20px;
+  
+    &:hover {
+      background: $error-hovered;
+      border: 1px solid $error-hovered;
+    }
+  
+    &:active,
+    &:focus {
+      background: $error-active;
+      border: 1px solid $error-active;
+    }
+  }
+
+  &-disabled {
+    background: $inner-shadow;    
+    border: 1px solid $inner-shadow;
+    outline: none;
+    border-radius: 5px;
+    color: $label-text;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 2.5px 20px;
+  }
+}

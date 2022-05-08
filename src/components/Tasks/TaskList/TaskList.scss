@@ -1,0 +1,17 @@
+.task {
+  &-list {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 3px #B5B5B5;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

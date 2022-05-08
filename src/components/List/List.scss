@@ -1,0 +1,31 @@
+.task {
+  &-tasks {
+    flex-grow: 1;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      box-shadow: inset 0px 0px 2px 1px #b5b5b5;
+      border-radius: 5px; 
+      overflow: hidden;
+    }
+
+    &-item {
+      height: 10%;
+      background-color: #fff;
+      &:nth-child(even) {
+        background: #F2F2F2;
+      }
+    }
+  }
+}

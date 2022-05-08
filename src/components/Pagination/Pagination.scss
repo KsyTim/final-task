@@ -1,0 +1,29 @@
+.task {
+  &-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-nav {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+        &[data-page] {
+          padding: 2.5px 10px;
+          &:not([data-page=""]) {
+            padding: 2.5px 7.5px;
+          }
+        }
+      }
+    }
+
+    &-info {
+      font-size: 14px;
+      line-height: 16px;
+      color: #B5B5B5;
+    }
+  }
+}

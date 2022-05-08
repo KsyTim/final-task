@@ -1,8 +1,17 @@
 @import '../css/normalize';
 @import '../css/fonts';
 @import '../css/colors';
+@import '../css/buttons';
 @import '../components/Header/Header.scss';
 @import '../components/Login/Login.scss';
+@import '../pages/TaskPage/TaskPage.scss';
+@import '../components/Tasks/TaskList/TaskList.scss';
+@import '../components/Heading/Heading.scss';
+@import '../components/Buttons/ButtonsContainer.scss';
+@import '../components/Tasks/TaskStatus/Status/Status.scss';
+@import '../components/Tasks/TaskFilter/TaskFilter.scss';
+@import '../components/List/List.scss';
+@import '../components/Pagination/Pagination.scss';
 
 body {
   font-family: 'Roboto';

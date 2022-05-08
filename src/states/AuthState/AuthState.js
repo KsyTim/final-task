@@ -1,6 +1,6 @@
 class AuthState {
 
-  isAuth = false;
+  isAuth = true;
   
 }
 

@@ -53,31 +53,51 @@
         margin-bottom: 5px;
       }
       
-      &-input {
-        border: 1px solid $primary;
+      &-input {        
         box-shadow: inset 0px 0px 2px 1px $inner-shadow;
         border-radius: 3px;
+        border: 1px solid transparent;
         padding: 5px 10px;
         outline: none;
+        font-family: 'Inter';
+        font-size: 14px;
+        line-height: 16px;
       
         &::placeholder {
           font-family: 'Inter';
           font-size: 14px;
           line-height: 16px;
+          color: $label-text;
+        }
+
+        &:hover {
+          border: 1px solid $primary;
+          box-shadow: inset 0px 0px 2px 1px $inner-shadow;
+          border-radius: 3px;
+        }
+
+        &:active,
+        &:focus {
+          border: 1px solid $primary;
+          box-shadow: 0px 0px 2px 2px rgba(123, 97, 255, 0.5);
+          border-radius: 3px;
+        }
+
+        &:disabled {
+          border: none;
+          background: $inner-shadow;
+          box-shadow: inset 0px 0px 2px 1px $inner-shadow;
+          border-radius: 3px;
+
+          &::placeholder {
+            color: $label-text;
+          }
         }
       }
     }
 
     &-btn {
-      background: $success;
-      border-radius: 5px;
-      border: none;
-      outline: none;
-      color: $disabled-text;
-      font-size: 16px;
-      line-height: 19px;
       padding: 5px 15px;
     }
   } 
-
 }

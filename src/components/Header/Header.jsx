@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom'; 
-// import AuthState from "../../states/AuthState/AuthState";
+import AuthState from "../../states/AuthState/AuthState";
 import { HeaderNav } from "./HeaderNav/HeaderNav";
 import { HeaderProfile } from "./HeaderProfile/HeaderProfile";
 
 export const Header = () => {
-  // const auth = AuthState.isAuth;
+  const auth = AuthState.isAuth;
   return (
     <header className="header">
       <div className="header-wrapper">
@@ -20,8 +20,12 @@ export const Header = () => {
             <path d="M117.144 20c-1.23 0-2.162-.256-2.797-.767-.635-.53-.952-1.279-.952-2.249 0-.423.06-.882.179-1.376l.238-1.031c.079-.3.119-.626.119-.98 0-.846-.357-1.269-1.072-1.269-.317 0-.654.08-1.011.238-.337.159-.734.406-1.19.74l-1.547 6.535h-4.285l4.314-17.99 4.404-.528-2.232 9.312 5.743-4.021H120l-5.95 3.677c.297-.07.624-.106.981-.106 1.071 0 1.885.291 2.44.873.555.582.833 1.323.833 2.222 0 .37-.04.706-.119 1.006l-.327 1.322c-.099.318-.149.6-.149.847 0 .653.387.979 1.16.979.437 0 .714-.027.833-.08.119-.052.189-.079.209-.079-.04.582-.228 1.076-.566 1.482a3.195 3.195 0 0 1-1.13.925c-.417.212-.774.318-1.071.318Z" fill="#000"/>
           </svg>
         </Link>
-        <HeaderNav />
-        <HeaderProfile />        
+        {auth &&
+          <>
+            <HeaderNav />
+            <HeaderProfile />
+          </>    
+        }      
       </div>
     </header>
   )

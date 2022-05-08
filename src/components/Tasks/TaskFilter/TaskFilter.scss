@@ -1,0 +1,224 @@
+.task {
+
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-type {
+      width: 9%;
+    }
+
+    &-name {
+      width: 38%;
+    }
+
+    &-user {
+      width: 14%;
+    }
+
+    &-status {
+      width: 12%;
+    }
+
+    &-rank {
+      width: 10%;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      z-index: 1;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-container {
+      position: relative;
+      height: 24px;
+
+      &_item {
+
+        &__visible {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0);
+          right: 0;
+          top: 0;
+          bottom: 0;
+          box-shadow: inset 0px 0px 2px 1px $inner-shadow;
+          border-radius: 3px;
+          // background-color: $light-color;
+          background-color: transparent;
+          // border: 1px solid transparent;
+          border: 1px solid $inner-shadow;
+          width: 100%;
+          height: 100%;
+          font-family: 'Inter';
+          font-size: 14px;
+          line-height: 14px;
+          color: $label-text;
+          padding: 4px 10px;
+          z-index: 1;
+
+          &.open {
+            width: 95%;
+          }
+
+          &:hover,
+          &.active {
+            border: 1px solid $primary;            
+            box-shadow: inset 0px 0px 2px 1px $inner-shadow;
+            border-radius: 3px;
+            color: $text-color;
+          }
+
+          &:disabled {
+            background: $inner-shadow;
+            box-shadow: inset 0px 0px 2px 1px $inner-shadow;
+            border-radius: 3px;
+          }
+        }
+
+        &__hidden {
+          display: none;
+          position: absolute;
+          top: -5px;
+          width: 100%;
+          padding: 34px 0 5px;
+          border: 1px solid $primary;
+          box-shadow: 0px 0px 2px 2px $dropdown-filter-shadow;
+          border-radius: 3px;
+
+          label {
+            display: block;
+            padding: 2px 2.5%;
+            position: relative;
+
+            &:hover
+            {
+              background-color: $primary-dropdown-light;
+            }
+
+            &:active{
+              background-color: $primary;
+            }
+
+            input[type=checkbox] {
+              position: absolute;
+              z-index: -1;
+              opacity: 0;
+              display: block;
+              width: 0;
+              height: 0;
+
+              /* Checked */
+              &+.filter {
+                &-task {
+                  &-checkbox {
+                    display: flex;
+                    position: relative;
+                    padding: 0 0 0 35px;
+                    line-height: 24px;
+                    &:after {
+                      content: "";
+                      opacity: 0;
+                      transition: opacity 0.3s ease;
+                    }
+                    &:before {
+                      content: "";
+                      width: 24px;
+                      height: 24px;
+                      position: absolute;
+                      left: 0;
+                      top: 50%;
+                      border: 1px solid $text-color;
+                      border-radius: 5px;
+                      transform: translate(0, -50%);
+                    }                    
+                    /* Hover */
+                    &:hover {
+                      &:before {
+                        border: 1px solid $primary;
+                      }
+                    }
+                  }
+                }
+              }
+              &:checked {
+                &+.filter {
+                  &-task {
+                    &-checkbox {
+                      &:after {
+                        content: "x";
+                        color: $disabled-text;
+                        font-size: 30px;
+                        position: absolute;
+                        top: 50%;
+                        left: 6.5px;
+                        opacity: 1;
+                        font-size: 24px;
+                        line-height: 24px;
+                        transform: translate(0, -53%);
+                        font-weight: 100;
+                      }
+                      &:before {
+                        background-color: $primary;
+                        border: 1px solid $primary;
+                      }
+                    }
+                  }
+                }
+              }
+              &:disabled {
+                &+.filter {
+                  &-task {
+                    &-checkbox {
+                      color: $inner-shadow;
+              
+                      &:before {
+                        background-color: $inner-shadow;
+                        border: 1px solid $inner-shadow;
+                      }
+                    }
+                  }
+                }
+              
+                &:checked {
+                  &+.filter {
+                    &-task {
+                      &-checkbox {
+                        &::after {
+                          color: $label-text;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .checked {
+      background-color: $primary !important;
+    }
+
+    &-btn {
+      height: 24px;
+    }
+  }
+}
+
+.dropdown {
+
+  &__active {
+    display: block;
+    background-color: $light-color;
+  }
+}

@@ -1,0 +1,13 @@
+.heading {
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+
+    button {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}  
